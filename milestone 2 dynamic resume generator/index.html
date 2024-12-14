@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Generator</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Input Form -->
+        <div class="form-container">
+            <h2 style="color: #1565c0; text-align: center;">Resume Input Form</h2>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="summary">Summary</label>
+                <textarea id="summary" placeholder="Write a short summary..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills (comma-separated)</label>
+                <input type="text" id="skills" placeholder="e.g., HTML, CSS, JavaScript">
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience</label>
+                <textarea id="experience" placeholder="Describe your experience..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="education">Education</label>
+                <textarea id="education" placeholder="List your education..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="certifications">Certifications</label>
+                <textarea id="certifications" placeholder="List your certifications..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="projects">Projects</label>
+                <textarea id="projects" placeholder="List your projects..."></textarea>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact Details</label>
+                <textarea id="contact" placeholder="e.g., Phone: +123456789, Email: example@mail.com, LinkedIn: linkedin.com/in/username"></textarea>
+            </div>
+            <button onclick="generateResume()">Generate Resume</button>
+        </div>
+
+        <!-- Resume Output -->
+        <div class="resume-container">
+            <div class="resume" id="resume">
+                <h1 id="resume-name" class="editable" contenteditable="true">Your Name</h1>
+                <h2>Summary</h2>
+                <p id="resume-summary" class="editable" contenteditable="true">Your summary will appear here.</p>
+                <h2>Skills</h2>
+                <div id="resume-skills" class="skills editable" contenteditable="true"></div>
+                <h2>Experience</h2>
+                <p id="resume-experience" class="editable" contenteditable="true">Your experience will appear here.</p>
+                <h2>Education</h2>
+                <p id="resume-education" class="editable" contenteditable="true">Your education will appear here.</p>
+                <h2>Certifications</h2>
+                <p id="resume-certifications" class="editable" contenteditable="true">Your certifications will appear here.</p>
+                <h2>Projects</h2>
+                <p id="resume-projects" class="editable" contenteditable="true">Your projects will appear here.</p>
+                <h2>Contact</h2>
+                <p id="resume-contact" class="editable" contenteditable="true">Your contact details will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
